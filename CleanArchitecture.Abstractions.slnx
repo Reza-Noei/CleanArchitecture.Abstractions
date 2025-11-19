@@ -6,10 +6,13 @@
   <Folder Name="/Solution Items/">
     <File Path=".gitignore" />
     <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
   </Folder>
   <Folder Name="/src/">
     <Project Path="src/CleanArchitecture.Application.Abstractions/CleanArchitecture.Application.Abstractions.csproj" />
     <Project Path="src/CleanArchitecture.Domain.Abstractions/CleanArchitecture.Domain.Abstractions.csproj" />
+    <Project Path="src/CleanArchitecture.Repository.EntityFramework/CleanArchitecture.Repository.EntityFramework.csproj" Id="c2e51ce0-cddb-4283-bb62-3585961aaf98" />
+    <Project Path="src/CleanArchitecture.Repository/CleanArchitecture.Repository.csproj" />
     <Project Path="src/CleanArchitecture.Specification/CleanArchitecture.Specification.csproj" />
   </Folder>
 </Solution>

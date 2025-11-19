@@ -5,8 +5,8 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<PackageId>CleanArchitecture.Domain.Abstractions</PackageId>
-		<Description>Domain abstractions for Clean Architecture.</Description>
+		<PackageId>CleanArchitecture.Repository.EntityFramework</PackageId>
+		<Description>EntityFramework repositories for Clean Architecture.</Description>
 		<PackageIcon>icon.png</PackageIcon>
 		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
 	</PropertyGroup>
@@ -16,15 +16,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\CleanArchitecture.Specification\CleanArchitecture.Specification.csproj" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Using Include="System" />
-		<Using Include="System.Collections.Generic" />
-		<Using Include="System.Linq" />
-		<Using Include="System.Linq.Expressions" />
-		<Using Include="System.Threading" />
-		<Using Include="System.Threading.Tasks" />
+		<ProjectReference Include="..\CleanArchitecture.Domain.Abstractions\CleanArchitecture.Domain.Abstractions.csproj" />
+		<ProjectReference Include="..\CleanArchitecture.Repository\CleanArchitecture.Repository.csproj" />
 	</ItemGroup>
+
 </Project>

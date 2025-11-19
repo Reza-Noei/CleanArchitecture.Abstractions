@@ -8,9 +8,11 @@
 		<PackageId>CleanArchitecture.Specification</PackageId>
 		<Description>Specification pattern for Clean Architecture.</Description>
 		<PackageIcon>icon.png</PackageIcon>
+		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<InternalsVisibleTo Include="CleanArchitecture.Repository.EntityFramework"/>
 		<None Include="..\..\build\icons\icon.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 	

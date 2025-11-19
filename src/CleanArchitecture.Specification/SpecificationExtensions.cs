@@ -1,4 +1,6 @@
-﻿namespace CleanArchitecture.Specification;
+﻿using System;
+
+namespace CleanArchitecture.Specification;
 
 /// <summary>
 /// Extension methods for specifications.
