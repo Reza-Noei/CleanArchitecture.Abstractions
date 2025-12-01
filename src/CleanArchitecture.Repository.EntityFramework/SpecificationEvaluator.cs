@@ -1,5 +1,6 @@
 ﻿using CleanArchitecture.Repository.EntityFramework.Evaluators;
 using CleanArchitecture.Specification;
+using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchitecture.Repository.EntityFramework;
 
