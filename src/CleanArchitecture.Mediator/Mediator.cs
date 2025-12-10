@@ -201,18 +201,24 @@ public sealed class Mediator : IMediator
         // Final handler delegate: Func<Task<TResponse>>
         Func<Task> finalHandler = async () =>
         {
-            // Invoke handler.HandleAsync(request, cancellationToken)
-            var taskObj = handleMethod.Invoke(handlerInstance, new object[] { request, cancellationToken }) as Task;
-            if (taskObj == null)
-                throw new InvalidOperationException("Handler HandleAsync did not return a Task.");
-
-            await taskObj.ConfigureAwait(false);
-
-            // If handler returned Task<T>, extract Result, otherwise return default (should not happen for queries/commands with response)
-            var taskType = taskObj.GetType();
-            if (taskType.IsGenericType)
+            try
             {
-                var resultProp = taskType.GetProperty("Result");
+                var taskObj = handleMethod.Invoke(handlerInstance, new object[] { request, cancellationToken }) as Task;
+                if (taskObj == null)
+                    throw new InvalidOperationException("Handler HandleAsync did not return a Task.");
+
+                await taskObj.ConfigureAwait(false);
+
+                // If handler returned Task<T>, extract Result, otherwise return default (should not happen for queries/commands with response)
+                var taskType = taskObj.GetType();
+                if (taskType.IsGenericType)
+                {
+                    var resultProp = taskType.GetProperty("Result");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex.InnerException!;
             }
         };
 
@@ -248,7 +254,7 @@ public sealed class Mediator : IMediator
         }
 
         // Execute pipeline
-         await pipeline().ConfigureAwait(false);
+        await pipeline().ConfigureAwait(false);
     }
 
     /// <summary>
