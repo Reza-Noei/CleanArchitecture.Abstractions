@@ -4,21 +4,24 @@
     <File Path="build/icons/icon.png" />
   </Folder>
   <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
     <File Path=".gitignore" />
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
     <File Path="README.md" />
   </Folder>
   <Folder Name="/src/">
-    <Project Path="src/CleanArchitecture.Application.Abstractions/CleanArchitecture.Application.Abstractions.csproj" />
-    <Project Path="src/CleanArchitecture.Domain.Abstractions/CleanArchitecture.Domain.Abstractions.csproj" />
-    <Project Path="src/CleanArchitecture.Mediator.AspNetCore/CleanArchitecture.Mediator.AspNetCore.csproj" Id="5b281847-220e-4a0b-959c-a4ac5f4b6975" />
-    <Project Path="src/CleanArchitecture.Mediator/CleanArchitecture.Mediator.csproj" Id="adfdf30b-9972-448a-8934-c2f86413fa8c" />
-    <Project Path="src/CleanArchitecture.Repository.EntityFramework/CleanArchitecture.Repository.EntityFramework.csproj" Id="c2e51ce0-cddb-4283-bb62-3585961aaf98" />
-    <Project Path="src/CleanArchitecture.Repository/CleanArchitecture.Repository.csproj" />
-    <Project Path="src/CleanArchitecture.Specification/CleanArchitecture.Specification.csproj" />
+    <Project Path="src/CleanArch.Application.Abstractions/CleanArch.Application.Abstractions.csproj" />
+    <Project Path="src/CleanArch.Domain.Abstractions/CleanArch.Domain.Abstractions.csproj" />
+    <Project Path="src/CleanArch.Mediator.AspNetCore/CleanArch.Mediator.AspNetCore.csproj" />
+    <Project Path="src/CleanArch.Mediator/CleanArch.Mediator.csproj" />
+    <Project Path="src/CleanArch.Repository.EntityFramework/CleanArch.Repository.EntityFramework.csproj" />
+    <Project Path="src/CleanArch.Repository/CleanArch.Repository.csproj" />
+    <Project Path="src/CleanArch.Specification/CleanArch.Specification.csproj" />
   </Folder>
   <Folder Name="/tests/">
-    <Project Path="tests/CleanArchitecture.Mediator.UnitTests/CleanArchitecture.Mediator.UnitTests.csproj" Id="eacccec9-1ac8-4e95-8876-c43a7493a9ba" />
+    <Project Path="tests/CleanArch.Mediator.AspNetCore.UnitTests/CleanArch.Mediator.AspNetCore.UnitTests.csproj" />
+    <Project Path="tests/CleanArch.Mediator.UnitTest.Commons/CleanArch.Mediator.UnitTest.Commons.csproj" />
+    <Project Path="tests/CleanArch.Mediator.UnitTests/CleanArch.Mediator.UnitTests.csproj" />
   </Folder>
 </Solution>

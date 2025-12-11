@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageId>CleanArch.Domain.Abstractions</PackageId>
+		<Authors>Reza Noei</Authors>
+		<Description>Domain abstractions for Clean Architecture.</Description>
+		<PackageIcon>icon.png</PackageIcon>
+		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\build\icons\icon.png" Pack="true" PackagePath="" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\CleanArch.Specification\CleanArch.Specification.csproj" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Using Include="System" />
+		<Using Include="System.Collections.Generic" />
+		<Using Include="System.Linq" />
+		<Using Include="System.Linq.Expressions" />
+		<Using Include="System.Threading" />
+		<Using Include="System.Threading.Tasks" />
+	</ItemGroup>
+</Project>
