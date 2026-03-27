@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+
+		<!-- Package Configuration -->
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageId>CleanArch.Messaging</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>Amirreza Ghasemi</Authors>
+		<Owners>Reza Noei</Owners>
+		<Company>Resaa</Company>
+		<Product>CleanArch.Messaging</Product>
+		<Description>
+			Reliable messaging library implementing Transactional Outbox and Inbox patterns for distributed systems.
+			Ensures exactly-once message delivery with PostgreSQL and MediatR integration.
+			Solution Architect: Reza Noei (reza.noei@chmail.ir)
+			Implementation: Amirreza Ghasemi (arezaqassemi@gmail.com)
+		</Description>
+		<PackageTags>outbox;inbox;messaging;rabbitmq;postgresql;distributed-systems;event-driven;cqrs;mediatr;transactional-outbox</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/AmirZag/messaging-outbox-inbox</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/AmirZag/messaging-outbox-inbox</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>icon.png</PackageIcon>
+		<Copyright>Copyright © 2025 Resaa.</Copyright>
+
+		<!-- Documentation -->
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\" />
+		<None Include="..\..\build\icons\icon.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="CleanArch.Messaging.AspNetCore" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MediatR" Version="12.4.1" />
+	</ItemGroup>
+</Project>
